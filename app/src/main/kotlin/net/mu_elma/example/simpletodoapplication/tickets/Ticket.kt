@@ -7,7 +7,8 @@ import java.util.*
  */
 
 // ToDo詳細 Ticketという名前で管理
-data class Ticket (
+data class Ticket(
+        val todoNumber: Int,
         val title: String,
         val status: TicketStatus,
         val priority: TicketPriority,
