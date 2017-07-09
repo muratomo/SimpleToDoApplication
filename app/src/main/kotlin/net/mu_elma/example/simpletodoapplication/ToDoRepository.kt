@@ -34,9 +34,9 @@ object ToDoRepository {
     fun getAllIssues() : LiveData<List<Issue>> {
         val issues = MutableLiveData<List<Issue>>()
         issues.value = mutableListOf<Issue>().apply {
-            add(Issue(0))
-            add(Issue(1))
-            add(Issue(2))
+            add(Issue(0, "issue 1"))
+            add(Issue(1, "issue 2"))
+            add(Issue(2, "issue 3"))
         }
         return issues
     }
