@@ -1,4 +1,4 @@
-package net.mu_elma.example.simpletodoapplication
+package net.mu_elma.example.simpletodoapplication.issue
 
 /**
  * Created by muratomo on 2017/07/09.
