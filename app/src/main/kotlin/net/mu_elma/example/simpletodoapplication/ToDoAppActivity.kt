@@ -5,6 +5,7 @@ import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 
 import net.mu_elma.example.simpletodoapplication.issue.IssueViewModel
 import net.mu_elma.example.simpletodoapplication.issue.IssueViewModelFactory
@@ -24,6 +25,8 @@ class ToDoAppActivity : LifecycleActivity() {
                 Observer { issues ->
                     // ここでViewに反映させる
                     if (issues != null) {
+                        val textView = findViewById(R.id.text) as TextView
+                        textView.text = issues[0].title
                         Log.d("todoApp", issues[0].toString())
                         Log.d("todoApp", issues[1].toString())
                         Log.d("todoApp", issues[2].toString())
