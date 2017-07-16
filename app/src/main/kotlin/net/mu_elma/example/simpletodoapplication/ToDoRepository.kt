@@ -2,6 +2,7 @@ package net.mu_elma.example.simpletodoapplication
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
+import net.mu_elma.example.simpletodoapplication.issue.Issue
 import net.mu_elma.example.simpletodoapplication.tickets.Ticket
 import net.mu_elma.example.simpletodoapplication.tickets.TicketPriority
 import net.mu_elma.example.simpletodoapplication.tickets.TicketStatus
@@ -13,6 +14,7 @@ import java.util.*
 object ToDoRepository {
     fun getTickets(issueNum: Int) : LiveData<List<Ticket>> {
         val tickets = MutableLiveData<List<Ticket>>()
+
         tickets.value = mutableListOf<Ticket>().apply {
             when(issueNum) {
                 0 -> {
@@ -33,6 +35,7 @@ object ToDoRepository {
 
     fun getAllIssues() : LiveData<List<Issue>> {
         val issues = MutableLiveData<List<Issue>>()
+
         issues.value = mutableListOf<Issue>().apply {
             add(Issue(0, "issue 1"))
             add(Issue(1, "issue 2"))
